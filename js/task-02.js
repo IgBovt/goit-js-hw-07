@@ -14,13 +14,13 @@ const images = [
 ];
 
 images.map((image) => {
-  const list = document.querySelector(".gallery");
-  const listItem = document.createElement("li");
-  list.append(listItem);
+  const listEl = document.querySelector(".gallery");
+  const listItemEl = document.createElement("li");
+  listEl.append(listItemEl);
 
-  const img = document.createElement("img");
-  img.src = image.url;
-  img.alt = image.alt;
-  img.classList.add("img");
-  listItem.append(img);
+  const imgEl = document.createElement("img");
+  imgEl.src = image.url;
+  imgEl.alt = image.alt;
+  imgEl.classList.add("img");
+  listItemEl.append(imgEl);
 });
