@@ -13,14 +13,38 @@ const images = [
   },
 ];
 
-images.map((image) => {
-  const listEl = document.querySelector(".gallery");
-  const listItemEl = document.createElement("li");
-  listEl.append(listItemEl);
+// =====FUNCTION, createElement WAY ======//
+// =====FUNCTION, createElement WAY ======//
 
-  const imgEl = document.createElement("img");
-  imgEl.src = image.url;
-  imgEl.alt = image.alt;
-  imgEl.classList.add("img");
-  listItemEl.append(imgEl);
-});
+const listEl = document.querySelector(".gallery");
+
+const addImagesList = (images) => {
+  return images.map((image) => {
+    const listItemEl = document.createElement("li");
+    const imgEl = document.createElement("img");
+    imgEl.src = image.url;
+    imgEl.alt = image.alt;
+    imgEl.width = 640;
+    imgEl.classList.add("img");
+    listItemEl.appendChild(imgEl);
+
+    return listItemEl;
+  });
+};
+const elements = addImagesList(images);
+listEl.append(...elements);
+
+// =====ANOTHER WAY ======//
+// =====ANOTHER WAY ======//
+
+// const markup = images
+//   .map(
+//     (image) =>
+//       `<li>
+//     <img src="${image.url}" alt="${image.alt}" width="640" class="img">
+//     </li>`
+//   )
+//   .join("");
+
+// const listEl = document.querySelector(".gallery");
+// listEl.insertAdjacentHTML("beforeend", markup);
