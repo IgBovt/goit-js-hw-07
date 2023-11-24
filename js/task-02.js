@@ -31,8 +31,7 @@ const addImagesList = (images) => {
     return listItemEl;
   });
 };
-const elements = addImagesList(images);
-listEl.append(...elements);
+listEl.append(...addImagesList(images));
 
 // =====ANOTHER WAY ======//
 // =====ANOTHER WAY ======//
