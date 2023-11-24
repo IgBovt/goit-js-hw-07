@@ -37,14 +37,16 @@ listEl.append(...elements);
 // =====ANOTHER WAY ======//
 // =====ANOTHER WAY ======//
 
-// const markup = images
-//   .map(
-//     (image) =>
-//       `<li>
+// const createGallery = (images) => {
+//   const markup = images
+//     .map(
+//       (image) =>
+//         `<li>
 //     <img src="${image.url}" alt="${image.alt}" width="640" class="img">
 //     </li>`
-//   )
-//   .join("");
-
+//     )
+//     .join("");
+//   return markup;
+// };
 // const listEl = document.querySelector(".gallery");
-// listEl.insertAdjacentHTML("beforeend", markup);
+// listEl.insertAdjacentHTML("beforeend", createGallery(images));
