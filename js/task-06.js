@@ -4,8 +4,11 @@ const refs = {
   destroyButton: document.querySelector("button[data-destroy]"),
   container: document.querySelector("#boxes"),
 };
-refs.controls.firstElementChild.addEventListener("input", getNumber);
-refs.createButton.addEventListener("click", toMakeNewElements);
+
+refs.createButton.addEventListener("click", () => {
+  const amount = refs.controls.firstElementChild.value;
+  createBoxes(amount);
+});
 refs.destroyButton.addEventListener("click", clearElements);
 
 function getRandomHexColor() {
@@ -14,15 +17,11 @@ function getRandomHexColor() {
     .padStart(6, 0)}`;
 }
 
-function getNumber() {
-  return refs.controls.firstElementChild.value;
-}
-
-function toMakeNewElements() {
+function createBoxes(amount) {
   clearElements();
   const box = document.createElement("div");
 
-  const number = getNumber();
+  const number = amount;
   if (number <= 100 && number >= 1) {
     for (let i = 0; i < number; i += 1) {
       const newElement = document.createElement("div");
@@ -31,7 +30,6 @@ function toMakeNewElements() {
       newElement.style.height = `${30 + i * 10}px`;
       box.appendChild(newElement);
     }
-
     refs.container.appendChild(box);
     refs.controls.firstElementChild.value = "";
   }
