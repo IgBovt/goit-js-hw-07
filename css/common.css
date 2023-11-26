@@ -13,28 +13,36 @@ body {
   line-height: 1.5;
 }
 
-input {
+/* input {
   padding: 8px;
-  font: inherit;
-}
+  font: inherit; */
+/* } */
 
 button {
-  padding: 8px 12px;
+  padding: 8px 16px;
   cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  background-color: #4e75ff;
+  color: #fff;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.64px;
+  border: none;
 }
-
-.gallery {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+button:hover {
+  background-color: #6c8cff;
+  text-align: center;
 }
-.img {
-  margin: 0 auto;
-  display: block;
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
 }
-
 /* TASK 1 */
+/* TASK 1 */
+
 #categories {
   display: flex;
   flex-direction: column;
@@ -77,4 +85,160 @@ button {
   padding-left: 16px;
   padding-top: 8px;
   padding-bottom: 8px;
+}
+
+/* TASK 2 */
+/* TASK 2 */
+
+.gallery {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+}
+.img {
+  display: block;
+}
+
+/* TASK 3 */
+/* TASK 3 */
+#name-output,
+h1 {
+  color: #2e2f42;
+  font-family: Montserrat;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32px; /* 133.333% */
+  letter-spacing: 0.96px;
+}
+#name-input {
+  color: #2e2f42;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.64px;
+  width: 360px;
+  height: 40px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 16px;
+  border-radius: 4px;
+  border: 1px solid #808080;
+}
+
+/* TASK 4 */
+/* TASK 4 */
+.login-form {
+  max-width: 320px;
+  display: flex;
+  flex-direction: column;
+}
+.form-button {
+  max-width: 86px;
+  max-height: 40px;
+}
+.login-form input {
+  color: #2e2f42;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.64px;
+  width: 360px;
+  height: 40px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 16px;
+  border-radius: 4px;
+  border: 1px solid #808080;
+}
+
+.login-form label {
+  margin-bottom: 16px;
+  color: #2e2f42;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
+  letter-spacing: 0.64px;
+}
+
+/* TASK 5 */
+/* TASK 5 */
+.widget {
+  text-align: center;
+  color: #2e2f42;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.64px;
+}
+.widget p,
+.widget span {
+  margin-top: 0;
+  margin-bottom: 16px;
+  color: #2e2f42;
+  color: #2e2f42;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
+  letter-spacing: 0.64px;
+}
+.widget button {
+  width: 148px;
+  height: 40px;
+}
+
+/* TASK 6 */
+/* TASK 6 */
+.create-button,
+.destroy-button {
+  width: 120px;
+  height: 40px;
+}
+.destroy-button {
+  background-color: #ff4e4e;
+}
+.destroy-button:hover {
+  background-color: #ff7070;
+}
+#controls input {
+  padding: 8px 72px;
+  border-radius: 8px;
+  border: 1px solid #808080;
+  color: #2e2f42;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
+  letter-spacing: 0.64px;
+  text-align: center;
+  width: 170px;
+  background-color: #f6f6fe;
+}
+#controls {
+  border-radius: 8px;
+  background-color: #f6f6fe;
+  padding: 32px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  justify-content: center;
+}
+.container {
+  background-color: #f6f6fe;
+  display: flex;
+  gap: 16px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 16px;
+  padding: 32px;
 }

@@ -19,3 +19,11 @@ function handleFormSubmit(event) {
 
   event.currentTarget.reset();
 }
+
+// === STYLES === //
+formRef.lastElementChild.classList.add("form-button");
+
+const allInputsInForm = document.querySelectorAll(".login-form input");
+
+const styleEL = document.querySelector("style");
+styleEL.remove();

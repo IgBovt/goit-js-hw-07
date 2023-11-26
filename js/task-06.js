@@ -20,7 +20,7 @@ function getRandomHexColor() {
 function createBoxes(amount) {
   clearElements();
   const box = document.createElement("div");
-
+  box.classList.add("container");
   const number = amount;
   if (number <= 100 && number >= 1) {
     for (let i = 0; i < number; i += 1) {
@@ -38,3 +38,7 @@ function createBoxes(amount) {
 function clearElements() {
   refs.container.innerHTML = "";
 }
+
+// === STYLES ===//
+refs.createButton.classList.add("create-button");
+refs.destroyButton.classList.add("destroy-button");

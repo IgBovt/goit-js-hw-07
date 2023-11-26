@@ -16,3 +16,7 @@ function changeBodyColor() {
 }
 
 refs.button.addEventListener("click", changeBodyColor);
+
+// === STYLES === //
+const styleEL = document.querySelector("style");
+styleEL.remove();

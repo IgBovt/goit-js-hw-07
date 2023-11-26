@@ -24,7 +24,8 @@ const addImagesList = (images) => {
     const imgEl = document.createElement("img");
     imgEl.src = image.url;
     imgEl.alt = image.alt;
-    imgEl.width = 640;
+    imgEl.width = 360;
+    imgEl.height = 300;
     imgEl.classList.add("img");
     listItemEl.appendChild(imgEl);
 
